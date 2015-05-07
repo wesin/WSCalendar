@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zz3-hi-40I" customClass="WSCalendarView" customModule="WesinCalendar">
-                                <rect key="frame" x="0.0" y="56" width="600" height="254"/>
+                                <rect key="frame" x="0.0" y="56" width="600" height="324"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="254" id="mnk-GN-7EI"/>
+                                    <constraint firstAttribute="height" constant="324" id="mnk-GN-7EI"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -262,4 +262,10 @@ class WSCalendarItem: UICollectionViewCell,UICollectionViewDataSource,UICollecti
         }
     }
     
+    
+    
+    func clearSelectDate() {
+        collection?.reloadData()
+    }
+    
 }

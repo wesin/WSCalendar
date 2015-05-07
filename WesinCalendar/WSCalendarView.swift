@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol WSCalendarViewDelegate:class {
+    func WSCalendarDidSelectDate(calendar:WSCalendarView) -> NSDate
+}
+
 enum CalendarType {
     case Day
     case Month
@@ -22,8 +26,7 @@ var curSelectYear:NSDate? = NSDate()
 
 class WSCalendarView: UIView,UICollectionViewDataSource,UICollectionViewDelegate {
     
-
-//    var curDate:NSDate = NSDate()
+    weak var delegate:WSCalendarViewDelegate?
     
     private let dayCount = 42
     var monthHorCount:Int = 4
@@ -129,7 +132,7 @@ class WSCalendarView: UIView,UICollectionViewDataSource,UICollectionViewDelegate
             currentDate = beginDate.dateByAddingYears(indexPath.section * yearPerCount * yearPerCount)
         }
         cell?.currentDate = currentDate
-//        println("currentDate:\(currentDate)")
+        cell?.clearSelectDate()
         return cell!
     }
     
